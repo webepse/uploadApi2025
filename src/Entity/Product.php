@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\GetCollection;
 use ApiPlatform\OpenApi\Model;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\Post;
@@ -14,6 +15,7 @@ use App\Controller\UploadProductController;
 #[ApiResource(
     operations: [
         new Get(),
+        new GetCollection(),
         new Post(),
         new Post(
             controller: UploadProductController::class,
